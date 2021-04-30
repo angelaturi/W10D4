@@ -1,8 +1,12 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import App from './app.jsx';
 
-const Root = () => {
+const Root = ({store}) => {
     return (
-        <h1>Todos App</h1>
+       <Provider store={store}>
+           <App />
+       </Provider>
     )
 }
 
